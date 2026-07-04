@@ -1,3 +1,23 @@
+Metadata-Version: 2.4
+Name: fin54
+Version: 0.1.0
+Summary: FIN54 financial intelligence toolkit
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: httpx
+Requires-Dist: pydantic>=2
+Requires-Dist: python-dotenv
+Requires-Dist: yfinance
+Requires-Dist: pandas
+Requires-Dist: feedparser
+Requires-Dist: duckdb
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: license-file
+
 # FIN54
 
 FIN54 is an open-data financial intelligence service built for Agentropolis workflows. It packages market, macro, regulatory, OTC proxy, and news signals into a single lightweight MCP-ready Python project that can be queried directly or used as a report engine inside autonomous agents.
