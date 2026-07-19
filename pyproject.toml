@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fin54"
-version = "0.1.0"
-description = "FIN54 financial intelligence toolkit"
+version = "0.2.0"
+description = "FIN54 financial intelligence toolkit and native MCP server"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -20,7 +20,18 @@ dependencies = [
   "duckdb",
   "requests",
   "beautifulsoup4",
+  "mcp[cli]>=1.27,<2",
 ]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+fin54-mcp = "fin54.mcp.native_server:main"
+fin54-api = "fin54.mcp.server:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -31,3 +42,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+asyncio_mode = "auto"
