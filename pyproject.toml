@@ -16,6 +16,7 @@ dependencies = [
   "python-dotenv",
   "yfinance",
   "pandas",
+  "numpy",
   "feedparser",
   "duckdb",
   "requests",
@@ -31,7 +32,6 @@ dev = [
 
 [project.scripts]
 fin54-mcp = "fin54.mcp.native_server:main"
-fin54-api = "fin54.mcp.server:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
