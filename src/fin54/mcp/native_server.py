@@ -67,17 +67,17 @@ async def sec_insider_activity(cik: str) -> list[dict[str, Any]]:
 
 
 @mcp.tool()
-def market_snapshot(ticker: str, period: str = "1y", benchmark: str = "SPY") -> dict[str, Any]:
+def market_snapshot(ticker: str, benchmark: str = "SPY") -> dict[str, Any]:
     """Return quote, technical indicators, volatility, and benchmark comparison."""
     return {
         "ticker": ticker.upper(),
         "quote": _dump(market_data.get_quote(ticker)),
-        "moving_averages": _dump(market_data.get_moving_averages(ticker, period=period)),
-        "rsi": _dump(market_data.get_rsi(ticker, period=period)),
-        "macd": _dump(market_data.get_macd(ticker, period=period)),
-        "volatility": _dump(market_data.get_volatility(ticker, period=period)),
+        "moving_averages": _dump(market_data.get_moving_averages(ticker)),
+        "rsi": _dump(market_data.get_rsi(ticker)),
+        "macd": _dump(market_data.get_macd(ticker)),
+        "volatility": _dump(market_data.get_volatility(ticker)),
         "benchmark_comparison": _dump(
-            market_data.get_benchmark_comparison(ticker, benchmark=benchmark, period=period)
+            market_data.get_benchmark_comparison(ticker, benchmark=benchmark)
         ),
     }
 
