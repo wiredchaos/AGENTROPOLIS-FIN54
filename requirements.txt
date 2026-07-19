@@ -9,3 +9,4 @@ feedparser>=6.0.11
 duckdb>=0.10.3
 requests>=2.32.0
 beautifulsoup4>=4.12.0
+mcp[cli]>=1.27,<2
