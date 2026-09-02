@@ -1,0 +1,24 @@
+apcp_version: 1
+status: ENROLLED_NOT_VERIFIED
+organization: AGENTROPOLIS-CITY-OF-AGENTS
+repo: AGENTROPOLIS-FIN54
+priority: tier-0
+role: financial-infrastructure
+fleet:
+  census_complete: false
+  claims_mapped: false
+  architecture_reviewed: false
+  aegis_reviewed: false
+  sentinel_verified: false
+outcomes:
+  architecture: PENDING
+  assurance: PENDING
+required_focus:
+  - financial-conservation
+  - numeric-integrity
+  - settlement-idempotency
+  - authority-boundaries
+  - receipts-and-reconciliation
+notes:
+  - Enrollment is not compliance.
+  - Financial invariants require independent falsification before closure.
